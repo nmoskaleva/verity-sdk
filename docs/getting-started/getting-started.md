@@ -23,6 +23,7 @@ The `docker` path simplifies the set up process but the local environment walkth
 > **NOTE:** You have an option to select **Use Staging Net** on the bottom of the setup screen. Flipping that switch will change the behavior of the application to:  
 > * Use the demo agency for connections that rely on the pre-Aries connection protocol.
 > * Only accept credentials anchored on Sovrin Staging Net, which can help with testing.  
+>
 > If you don't switch the toggle, Connect.Me will hold credentials from multiple Indy ledgers simultaneously. 
 
 4. Accept the End User License Agreement.
