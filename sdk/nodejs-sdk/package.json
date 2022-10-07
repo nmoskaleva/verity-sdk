@@ -15,7 +15,9 @@
     "lint-fix": "standard --fix",
     "package": "version=\"$(cat package.json | jq -r .version)\"; npm pack && mv verity-sdk-$version.tgz verity-sdk_$version.tgz",
     "publish": "version=\"$(cat package.json | jq -r .version)\"; curl -u \"${KRK_USERNAME}:${KRK_PASSWORD}\" -X POST -F \"file=@verity-sdk_$version.tgz\" https://kraken.corp.evernym.com/repo/npm/upload",
-    "doc-build": "./node_modules/.bin/jsdoc src -r -c doc/conf.json -d doc/_build"
+    "doc-build": "./node_modules/.bin/jsdoc src -r -c doc/conf.json -d doc/_build",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "ssi",
@@ -37,6 +39,8 @@
     "bs58": "^4.0.1",
     "indy-sdk": "^1.15.0",
     "request-promise-native": "^1.0.8",
-    "uuid": "^3.4.0"
-  }
+    "uuid": "^3.4.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
