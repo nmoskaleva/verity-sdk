@@ -3,7 +3,7 @@ requests==2.22.0
 base58==2.0.0
 
 # Development Dependencies (including testing)
-wheel==0.33.4
+wheel==0.38.0
 setuptools==41.0.1
 pylint==2.3.1
 pylint-quotes==0.2.1
